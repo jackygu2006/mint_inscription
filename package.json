@@ -1,0 +1,25 @@
+{
+  "description": "batch mint",
+	"version": "0.1.0",
+	"author": "Jacky Gu",
+  "scripts": {
+    "start:dev": "npx nodemon",
+    "build": "rimraf ./build && tsc",
+    "start": "node build/index.js"
+  },
+  "dependencies": {
+    "@ethereumjs/common": "^4.1.0",
+    "@ethereumjs/tx": "^5.1.0",
+    "axios": "^1.6.2",
+    "commander": "^11.1.0",
+    "dotenv": "^16.3.1",
+    "sleep-promise": "^9.1.0",
+    "web3": "1.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "nodemon": "^3.0.2",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3"
+  }
+}
