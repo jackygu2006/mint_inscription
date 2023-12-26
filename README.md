@@ -9,7 +9,7 @@
 ## 安装
 请确保本地有`git`和`npm`或者`yarn`环境，运行：
 ```
-https://github.com/jackygu2006/mint_inscription.git
+git clone https://github.com/jackygu2006/mint_inscription.git
 yarn install
 yarn build
 ```
