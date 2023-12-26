@@ -37,6 +37,7 @@ if(hexString === undefined || receiptAccount === undefined || isNaN(highestGasPr
 }
 
 const web3 = new Web3(new Web3.providers.HttpProvider(rpc));
+
 batchMint(web3, hexString, receiptAccount, 1, quantity, highestGasPrice, getBlockKey, rpc, parseInt(chainId), priKey);
 
 // getGasPrice().then(res => console.log(res));

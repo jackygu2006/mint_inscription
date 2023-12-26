@@ -55,3 +55,5 @@ Options:
 
 可以暂停片刻再尝试。
 
+## TODO
+* 优化获取nonce方式，避免出现`replacement transaction underpriced`

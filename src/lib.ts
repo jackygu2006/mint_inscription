@@ -40,7 +40,7 @@ export const batchMint = async (
 		try {
 			// execEIP1559Contract(web3, chainId, priKey, hex, 0, receiptAddress, {to: receiptAddress, id}, 
 			const gasPrice = await getGasPrice(getBlockKey);
-			console.log("gasPrice: ", gasPrice / 1000000000);
+			console.log("gasPrice: ", (gasPrice / 1000000000).toFixed(2), "GWei, ", (gasPrice * 22040 * 47 / 1e18).toFixed(3), "USD");
 			if(gasPrice * 1.02 > highestGasPrice * 1000000000) {
 				console.log("touch highest gas, quit!");
 				return;
@@ -51,7 +51,8 @@ export const batchMint = async (
 				},
 				async (confirmations, receipt, data) => {
 					console.log(`Get receipt #${data.id}`);
-					await sleep(500);
+					await sleep(1500);
+					console.log("=============================================");
 					id++;
 					batchMint(web3, hex, receiptAddress, id, max, highestGasPrice, getBlockKey, rpcUrl, chainId, priKey);
 					return;
